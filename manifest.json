@@ -1,0 +1,26 @@
+{
+  "short_name": "AITT",
+  "name": "All India Trade Test",
+  "icons": [
+    {
+      "src": "180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },    {
+      "src": "192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://aqwertyin.github.io/cbt/",
+  "background_color": "#fff",
+  "display": "standalone",
+  "theme_color": "#ccc",
+  "orientation": "portrait"
+
+}
