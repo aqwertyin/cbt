@@ -5,12 +5,62 @@
 hello, world! 
 
 
-<div id="boxcontainer" class="box-container add-to">
+
+
+
+
+
+<style>
+* { margin: 0; box-sizing: border-box; text-decoration: none; font-family: sans-serif; }
+html, body { height: 100%;  }
+.center-container { background-color: #000000ad; 
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+
+.center-content {
+  margin: 0;
+  position: absolute;                                                               
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<div class="center-container add-to">
+  <div class="center-content">
+ 
+
+<style>
+section { width: 280px; background-color: #fff; border-radius: 15px;}
+</style>
+
+<section>
+<div style="padding: 28px 22px; text-align: center;">
+<img src="file:///C:/Users/csa-A/Desktop/128x128.png" />
+<br /> <br />
+
+<p style="color: red;"> fast, easy free app download and installation</p> <br />
+	<p><span style="float: right; color: #007bff;">
+		<span class="close">Cancel</span> &nbsp; &nbsp;  <span class="add-to-btn">Install</span>
+		</span> </p>
+</div>
+
+</section
+
+
+
+
+
+
+
+
+
+<div id="boxcontainer" class="box-container ">
 
   <div class="inner-box">
 
 
-   <button style="font-size: 15px; padding: 4px 8px; background-color: white; border: none; outline: none;" class="add-to-btn">Add to Home screen</button>
+   <button style="font-size: 15px; padding: 4px 8px; background-color: white; border: none; outline: none;">Add to Home screen</button>
 
 <hr />
   <div class="close" style="font-size: 14px; padding: 4px 8px;; background-color: #fff;">Cancel</div>
@@ -23,9 +73,15 @@ hello, world!
 
 
 
+
+
+
+
+
+
+
+
 <script>
-
-
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
