@@ -1,99 +1,88 @@
-	<link rel="manifest" href="manifest.json" />
-<meta content='width=device-width, initial-scale=1' name='viewport'/>
-<link href="style.css" rel="stylesheet" />
-<section style="border-bottom: 1px solid #ddd; background-color: white;">
-<div class="topnav mw-fixed" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="fn_responsive_nav()"><i class="fas fa-bars"></i></a>
-</div>
+<style>
+* { margin: 0; box-sizing: border-box; font-family: sans-serif; }
 
-</div>
+html, body { background-color: #b8dbee; }
+.top-container { background-color: white;  text-align: center }
+.top-container > h2 { padding: 12px; border-bottom: 1px solid red;}
+.top-container > h3 { font-size: 15px; padding: 11px;  }
+
+
+.main-container { width: 98%; max-width: 550px; margin: auto; background-color: #fff; border: 1px solid #007bff; margin-top: 6px; }
+.ques-timer { color: #007bff; font-size: 14px; padding: 8px 5px 2px 5px; }
+.ques-container { padding: 18px 10px; padding-bottom: 55px;   }
+
+  .question {   text-align: justify;   
+  width: 99%;
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 18px;
+  }
+
+  .answer { 
+    width: 99%;
+    color: #000000;
+    background: aliceblue; 
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.option-para{ margin: 0; }
+ 
+</style>
+
+
+<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+<meta content='#b8dbee' name='theme-color'/>
+
+
+<section class="top-container">
+
+<h2>CTS | CBTS</h2>
+<h3>ONLINE MOCK TEST NAME _ 03</h3>
+
 </section>
 
+<section class="main-container">
 
-hello, world! 
+<div class="ques-timer">
+<span>12/20</span>     <span style="float: right;"> 08:23</span>
+</div>
+
+<hr style="border: 0; height: 1px; background-color: #007bff;" />
+
+<div class="ques-container">
 
 
 
+<div id="question" class="qtext question">Which one is used as authentication for paring bluetooth devices ?</div>
+
+<div data-n="0" onclick="answerClicked(this.getAttribute('data-n'), this), setTimeout(update_ques, 400);" class="answer">
+<p class="option-para" id="0">Password</p></div>
 
 
+<div data-n="1" onclick="answerClicked(this.getAttribute('data-n'), this), setTimeout(update_ques, 250);" class="answer">
+<p class="option-para" id="1">Passcode</p></div>
 
 
-<style>
-* { margin: 0; box-sizing: border-box; text-decoration: none; font-family: sans-serif; }
-html, body { height: 100%;  }
-.center-container1 { background-color: #000000ad; 
-  position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+<div data-n="2" onclick="answerClicked(this.getAttribute('data-n'), this), setTimeout(update_ques, 250);" class="answer">
+<p class="option-para" id="2">Fingerprint</p></div>
 
-.center-content1 {
-  margin: 0;
-  position: absolute;                                                               
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
 
-<div class="center-container add-to">
-  <div class="center-content">
+<div data-n="3" onclick="answerClicked(this.getAttribute('data-n'), this),  setTimeout(update_ques, 250);" class="answer">
+<p class="option-para" id="3">Captch</p></div>
  
 
-<style>
-section { width: 280px; background-color: #fff; border-radius: 15px;}
-</style>
-
-<section>
-<div style="padding: 28px 22px; text-align: center;">
-<img src="icon/128x128.png" />
-<br /> <br />
-
-<p style="color: red;"> fast, easy free app download and installation</p> <br />
-	<p><span style="float: right; color: #007bff;">
-		<span class="close">Cancel</span> &nbsp; &nbsp;  <span class="add-to-btn">Install</span>
-		</span> </p>
-</div>
-
-</section
-
-	</div>
-	</div>
-
-
-
-
-
-
-
-<div id="boxcontainer" class="box-container ">
-
-  <div class="inner-box">
-
-
-   <button style="font-size: 15px; padding: 4px 8px; background-color: white; border: none; outline: none;">Add to Home screen</button>
-
-<hr />
-  <div class="close" style="font-size: 14px; padding: 4px 8px;; background-color: #fff;">Cancel</div>
-<br>
-
-
-  </div>
 
 </div>
 
+</section>
 
 
 
@@ -105,11 +94,6 @@ section { width: 280px; background-color: #fff; border-radius: 15px;}
 
 
 <script>
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  boxcontainer.style.display = "none";
-}
 
 
 	if ('serviceWorker' in navigator) {
@@ -121,33 +105,6 @@ span.onclick = function() {
 	    });
 	  });
 	}
-
-	let deferredPrompt;
-	var div = document.querySelector('.add-to');
-	var button = document.querySelector('.add-to-btn');
-	div.style.display = 'none';
-
-	window.addEventListener('beforeinstallprompt', (e) => {
-	  e.preventDefault();
-	  deferredPrompt = e;
-	  div.style.display = 'block';
-
-	  button.addEventListener('click', (e) => {
-	  div.style.display = 'none';
-	  deferredPrompt.prompt();
-	  deferredPrompt.userChoice
-	    .then((choiceResult) => {
-	      if (choiceResult.outcome === 'accepted') {
-	        console.log('User accepted the A2HS prompt');
-	      } else {
-	        console.log('User dismissed the A2HS prompt');
-	      }
-	      deferredPrompt = null;
-	    });
-	});
-	});
-
 </script>
 
 	  
-	  <script src="script.js"></script>
